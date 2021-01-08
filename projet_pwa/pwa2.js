@@ -1,6 +1,6 @@
 $(".ajax").click(function(){
   $.ajax({
-    url: 'http://newsapi.org/v2/top-headlines?domains=wsj.com&apiKey=06cefc222d4a427985620b7b06c4c441',
+    url: 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-12-08&sortBy=publishedAt&apiKey=06cefc222d4a427985620b7b06c4c441',
     type: 'GET',
     dataType: 'JSON',
     success: function(data){
