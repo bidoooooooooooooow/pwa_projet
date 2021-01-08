@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(".ajax").click(function(){
   $.ajax({
-    url: 'http://newsapi.org/v2/everything?domains=wsj.com&apiKey=06cefc222d4a427985620b7b06c4c441',
+    url: 'http://newsapi.org/v2/top-headlines?domains=wsj.com&apiKey=06cefc222d4a427985620b7b06c4c441',
     type: 'GET',
     dataType: 'JSON',
     success: function(data){
@@ -23,8 +23,3 @@ if ("serviceWorker" in navigator) {
             .catch((err) => console.log("service worker not registered", err));
     });
 }
-
-$("body > button").click(function() {
-   $("body").toggleClass("dark");
-   $("body > button").toggleClass("dark")
- });
